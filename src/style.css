@@ -1,0 +1,58 @@
+
+:root {
+  --neko-theme-bg-color: #ffffff;
+  --neko-theme-text-color: #181818;
+  --neko-theme-link-color: #0088ff;
+  --neko-theme-button-color: #181818;
+  --neko-theme-button-text-color: #ffffff;
+  --neko-theme-secondary-bg-color: #eeeeee;
+  --neko-theme-tertiary-bg-color: #dddddd;
+  --neko-theme-hint-color: #545454;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --neko-theme-bg-color: #181818;
+    --neko-theme-text-color: #ffffff;
+    --neko-theme-button-color: #ffffff;
+    --neko-theme-button-text-color: #181818;
+    --neko-theme-secondary-bg-color: #222222;
+    --neko-theme-tertiary-bg-color: #363636;
+    --neko-theme-hint-color: #bbbbbb;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0;
+}
+
+b {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+}
+
+a {
+  color: var(--neko-theme-link-color);
+  text-decoration: none;
+}
+
+a::after {
+  color: var(--neko-theme-link-color);
+}
+
+p {
+  line-height: 20px;
+  margin: 0;
+}
