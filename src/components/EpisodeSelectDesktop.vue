@@ -56,10 +56,18 @@ function select(index) {
 }
 
 .episode:hover {
+  color: var(--neko-theme-text-color);
   background-color: var(--neko-theme-tertiary-bg-color);
+  font-weight: 400;
 }
 
 .active {
+  background-color: var(--neko-theme-button-color);
+  color: var(--neko-theme-button-text-color);
+  font-weight: 600;
+}
+
+.active:hover {
   background-color: var(--neko-theme-button-color);
   color: var(--neko-theme-button-text-color);
   font-weight: 600;
