@@ -16,7 +16,7 @@
 
 <style scoped>
 .wrapper {
-  height: 500px;
+  flex-grow: 1;
   width: 1130px;
   display: flex;
   flex-direction: row;
