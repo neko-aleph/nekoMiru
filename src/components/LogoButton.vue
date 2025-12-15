@@ -26,4 +26,11 @@ const isDark = useDark();
 .drop-shadow {
   filter: drop-shadow(0 0 20px #bbbbbb);
 }
+
+b {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+}
 </style>
