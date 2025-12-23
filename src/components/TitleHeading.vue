@@ -5,17 +5,17 @@ defineProps({
 </script>
 
 <template>
-  <h2>{{ title }}</h2>
+  <h1>{{ title }}</h1>
 </template>
 
 <style scoped>
-  h2 {
+  h1 {
     text-align: center;
     margin: 0;
   }
 
   @media screen and (min-width: 1210px) {
-    h2 {
+    h1 {
       text-align: left;
     }
   }
