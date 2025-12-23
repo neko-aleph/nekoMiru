@@ -35,6 +35,7 @@ function select(index) {
   border-radius: 12px;
   overflow-y: auto;
   border: 1px solid var(--neko-theme-quinary-bg-color);
+  box-sizing: border-box;
 }
 
 .episode {
@@ -45,7 +46,7 @@ function select(index) {
   cursor: pointer;
   flex: 0 0 auto;
   height: 50px;
-  width: 310px;
+  width: 100%;
   font-family: "Geist", sans-serif;
   font-weight: 400;
   font-size: 16px;
