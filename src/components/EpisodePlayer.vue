@@ -62,6 +62,11 @@ media-captions * {
   opacity: 1 !important;
 }
 
+media-player[data-fullscreen] {
+  border: none !important;
+  border-radius: 0 !important;
+}
+
 @media screen and (min-width: 1210px) {
   media-player {
     height: 400px !important;
