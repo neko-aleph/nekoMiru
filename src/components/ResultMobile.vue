@@ -41,6 +41,7 @@ const router = useRouter();
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  height: 20px;
 }
 
 .after {
