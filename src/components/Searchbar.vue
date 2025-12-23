@@ -1,20 +1,40 @@
 <script setup>
-import { ref } from "vue";
+import {onMounted, onUnmounted, ref} from "vue";
 import { useRoute, useRouter } from "vue-router";
 
 const router = useRouter();
 const route = useRoute();
 
 const query = ref(route.params.query);
+const inputRef = ref(null);
 
 const search = () => {
   if (!query.value) return;
   router.push(`/search/${encodeURIComponent(query.value)}`);
 };
+
+const onKeyDown = (e) => {
+  if (e.key === "/" && !e.shiftKey) {
+    e.preventDefault();
+    inputRef.value.focus();
+  }
+
+  if (e.key === "Escape" && document.activeElement === inputRef.value) {
+    inputRef.value.blur();
+  }
+};
+
+onMounted(() => {
+  window.addEventListener("keydown", onKeyDown);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("keydown", onKeyDown);
+});
 </script>
 
 <template>
-  <input v-model="query" type="text" placeholder="..." @keyup.enter="search()">
+  <input ref="inputRef" v-model="query" type="text" placeholder="..." @keyup.enter="search()">
 </template>
 
 <style scoped>
