@@ -45,7 +45,7 @@ function select(index) {
   flex: 0 0 auto;
   height: 50px;
   width: 310px;
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: "Geist", sans-serif;
   font-weight: 400;
   font-size: 16px;
   display: flex;

@@ -19,7 +19,7 @@ const search = () => {
 
 <style scoped>
 input {
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: "Geist", sans-serif;
   font-weight: 400;
   font-size: 16px;
   height: 50px;
