@@ -33,7 +33,8 @@ function select(index) {
   width: 310px;
   background-color: var(--neko-theme-secondary-bg-color);
   border-radius: 12px;
-  overflow-y: auto
+  overflow-y: auto;
+  border: 1px solid var(--neko-theme-quinary-bg-color);
 }
 
 .episode {

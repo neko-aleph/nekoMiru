@@ -28,6 +28,7 @@ const isMobile = useMediaQuery("(max-width: 1209px)");
   border-radius: 12px;
   object-fit: cover;
   background-color: var(--neko-theme-secondary-bg-color);
+  border: 1px solid var(--neko-theme-quinary-bg-color);
 }
 
 @media screen and (min-width: 1210px) {

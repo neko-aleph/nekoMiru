@@ -33,6 +33,7 @@ const router = useRouter();
   flex-direction: row;
   justify-content: space-between;
   cursor: pointer;
+  border: 1px solid var(--neko-theme-quinary-bg-color);
 }
 
 .text {

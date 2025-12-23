@@ -32,5 +32,6 @@ input {
   border: none;
   outline: none;
   box-sizing: border-box;
+  border: 1px solid var(--neko-theme-quinary-bg-color);
 }
 </style>

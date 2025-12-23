@@ -34,6 +34,7 @@ select {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  border: 1px solid var(--neko-theme-quinary-bg-color);
 }
 
 .dropdown-icon {

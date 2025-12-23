@@ -45,6 +45,7 @@ media-player {
   overflow: hidden;
   background-color: var(--neko-theme-secondary-bg-color);
   display: block;
+  border: 1px solid var(--neko-theme-quinary-bg-color) !important;
 }
 
 media-player,
