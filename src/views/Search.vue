@@ -21,7 +21,7 @@ const isMobile = useMediaQuery("(max-width: 1209px)");
 
 const loadMore = async () => {
   isLoading.value = true;
-  const result = await search(route.params.query, page.value, 10);
+  const result = await search(route.params.query, page.value, 18);
   if (result) {
     results.value = [...results.value, ...result.results];
     hasNextPage.value = result.hasNextPage;
@@ -30,7 +30,7 @@ const loadMore = async () => {
 };
 
 onBeforeMount(async () => {
-  const result = await search(route.params.query, 1, 10);
+  const result = await search(route.params.query, 1, 18);
   if (result) {
     results.value = result.results;
     hasNextPage.value = result.hasNextPage;
@@ -95,7 +95,7 @@ watch(isSentinelResultVisible, (visible) => {
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
 }
 
 .sentinel {

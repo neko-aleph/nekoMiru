@@ -19,12 +19,12 @@ const router = useRouter();
 
 <style scoped>
 .title {
-  width: 210px;
-  height: 360px;
+  width: 180px;
+  height: 310px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
   align-items: start;
   cursor: pointer;
 }
@@ -33,14 +33,14 @@ img {
   object-fit: cover;
   background-color: var(--neko-theme-secondary-bg-color);
   border-radius: 12px;
-  width: 210px;
-  height: 310px;
+  width: 180px;
+  height: 265px;
   border: 1px solid var(--neko-theme-quinary-bg-color);
   box-sizing: border-box;
 }
 
 .text {
-  max-width: 210px;
+  max-width: 180px;
   height: 40px;
   max-height: 40px;
   display: -webkit-box;
