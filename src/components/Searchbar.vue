@@ -57,7 +57,7 @@ input {
   outline: none;
   box-sizing: border-box;
   border: 1px solid var(--neko-theme-quinary-bg-color);
-  transition: padding .1s ease-in-out, border .1s ease-in-out, box-shadow .25s ease-in-out;
+  transition: padding .25s ease-in-out, border .25s ease-in-out, box-shadow .25s ease-in-out;
 }
 
 input:focus {
