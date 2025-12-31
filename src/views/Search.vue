@@ -111,7 +111,7 @@ watch(isSentinelResultVisible, (visible) => {
     width: 310px !important;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
   }
 }
 </style>
