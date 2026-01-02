@@ -45,6 +45,12 @@ async function changeEpisode(i) {
   episodeReferer.value = result.headers.Referer;
 }
 
+function incrementEpidode() {
+  if (selectedEpisode.value < episodes.value.length - 1) {
+    selectedEpisode.value++;
+  }
+}
+
 onBeforeMount(async () => {
   const result = await getTitle(route.params.titleId);
   if (result) {
@@ -77,6 +83,7 @@ watch(selectedEpisode, async (i) => {
           :video="episodeVideo" 
           :subtitles="episodeSubtitles" 
           :referer="episodeReferer"
+          @episodeEnded="incrementEpidode"
         />
         <EpisodeSelectDesktop v-model="selectedEpisode" :episodes="episodes" />
       </div>
@@ -110,6 +117,7 @@ watch(selectedEpisode, async (i) => {
       :video="episodeVideo" 
       :subtitles="episodeSubtitles" 
       :referer="episodeReferer"
+      @episodeEnded="incrementEpidode"
     />
     <Empty v-else />
     <FooterNotice />

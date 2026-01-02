@@ -12,6 +12,8 @@ const props = defineProps({
   referer: String,
 });
 
+const emit = defineEmits(['episodeEnded']);
+
 const src = computed(() => {
   return `${proxy}/${ window.btoa(`${props.video}|${props.referer}`) }.m3u8`;
 });
@@ -26,12 +28,31 @@ const substitlesFiltered = computed(() => {
 const thumbnails = computed(() => {
   return props.subtitles.filter(item => item.lang === "thumbnails")[0];
 });
+
+function onEnded() {
+  emit('episodeEnded');
+}
 </script>
 
 <template>
-  <media-player crossorigin :key="src" :style="{ borderRadius: '12px' }" :title="title" :src="src">
+  <media-player
+    crossorigin
+    :key="src"
+    :style="{ borderRadius: '12px' }"
+    :title="title"
+    :src="src"
+    @ended="onEnded"
+  >
     <media-provider>
-      <track v-for="(subs, index) in substitlesFiltered" :key="subs.lang" :src="subs.url" kind="subtitles" :label="subs.lang" :srclang="subs.lang" :default="index === 0"/>
+      <track
+        v-for="(subs, index) in substitlesFiltered"
+        :key="subs.lang"
+        :src="subs.url"
+        kind="subtitles"
+        :label="subs.lang"
+        :srclang="subs.lang"
+        :default="index === 0"
+      />
     </media-provider>
     <media-video-layout :thumbnails="thumbnails"></media-video-layout>
   </media-player>
