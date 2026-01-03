@@ -38,7 +38,7 @@ p {
 
 @media screen and (min-width: 1210px) {
   .description {
-    width: 600px;
+    width: 100%;
     height: 1px;
     flex: 1 1 auto;
     overflow: hidden;
