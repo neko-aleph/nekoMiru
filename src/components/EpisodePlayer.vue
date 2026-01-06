@@ -45,13 +45,13 @@ function onEnded() {
   >
     <media-provider>
       <track
-        v-for="(subs, index) in substitlesFiltered"
+        v-for="subs in substitlesFiltered"
         :key="subs.lang"
         :src="subs.url"
         kind="subtitles"
         :label="subs.lang"
         :srclang="subs.lang"
-        :default="index === 0"
+        :default="subs.lang.toLowerCase().includes('en')"
       />
     </media-provider>
     <media-video-layout :thumbnails="thumbnails"></media-video-layout>
