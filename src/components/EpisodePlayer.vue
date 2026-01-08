@@ -19,6 +19,8 @@ const src = computed(() => {
 });
 
 const substitlesFiltered = computed(() => {
+  if (!props.subtitles) return [];
+
   return props.subtitles.filter(item => item.lang !== "thumbnails").map(item => ({
       ...item,
       url: `${proxy}/${window.btoa(`${item.url}|${props.referer}`)}.vtt`
@@ -26,6 +28,8 @@ const substitlesFiltered = computed(() => {
 });
 
 const thumbnails = computed(() => {
+  if (!props.subtitles) return [];
+
   return props.subtitles.filter(item => item.lang === "thumbnails")[0];
 });
 

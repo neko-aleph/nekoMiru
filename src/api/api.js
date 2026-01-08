@@ -8,11 +8,11 @@ export async function search(query, page, perPage) {
 }
 
 export async function getTitle(titleId) {
-  const res = await axios.get(`${BASE_URL}/meta/anilist/info/${titleId}`);
+  const res = await axios.get(`${BASE_URL}/meta/anilist/info/${titleId}?provider=zoro`);
   return res.data;
 }
 
 export async function getEpisode(episodeId) {
-  const res = await axios.get(`${BASE_URL}/meta/anilist/watch/${episodeId}`)
+  const res = await axios.get(`${BASE_URL}/meta/anilist/watch/${episodeId}?provider=zoro`)
   return res.data;
 }
