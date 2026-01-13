@@ -58,7 +58,7 @@ onBeforeMount(async () => {
     cover.value = result.image;
     description.value = result.description || "No description";
     status.value = result.status || "Unknown";
-    format.value = result.type || "Unknown";
+    format.value = (result.type || "Unknown").replace(/_/g, ' ');
     season.value = result?.season == null || result?.releaseDate == null ? "Unknown" : `${result.season.charAt(0).toUpperCase()}${result.season.slice(1).toLowerCase()} ${result.releaseDate}`;
     episodes.value = result.episodes;
 
