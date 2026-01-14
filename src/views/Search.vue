@@ -63,7 +63,8 @@ watch(isSentinelResultVisible, (visible) => {
           v-for="result in results" 
           :key="result.id"
           :id="result.id" 
-          :title="result.title.romaji || result.title.english || result.title.native || 'Unknown'" 
+          :title="result.title.romaji || result.title.english || result.title.native || 'Unknown'"
+          :image="result.image"
         />
       </div>
       <div ref="sentinel" class="sentinel"></div>
